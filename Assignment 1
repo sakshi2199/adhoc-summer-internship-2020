@@ -1,0 +1,37 @@
+#Task 1
+mkdir -p A/{B/{D/{I/M/Z,J},E/H/L/Z},C/{F/H/L,G/K/L}}
+tree A
+
+#Task 2
+which date
+chmod -x /usr/bin/date
+ls -l /usr/bin/date
+useradd -s /usr/bin/date newuser
+setfacl -m u:newuser:rwx /usr/bin/date
+su - newuser
+date
+
+
+
+#Task 3
+useradd A
+useradd B
+passwd A
+passwd B
+sudo - A
+mkdir dir1
+cd dir1
+touch file1.txt
+sudo cp -r /home/A/dir1 /home/B
+exit
+sudo - B
+mkdir dir2
+cd dir2
+touch file2.txt
+sudo cp -r /home/B/dir2 /home/A
+exit
+ 
+
+#Task 4
+
+
